@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pag="clr-namespace:App_Secao07.Pages"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="App_Secao07.Views.MenuPage">
+    <MasterDetailPage.Master>
+        <!-- Menu -->
+        <ContentPage Title="Menu" BackgroundColor="#0D1F2D">
+            <StackLayout>
+                <StackLayout BackgroundColor="#FFC926">
+                    <StackLayout>
+                        <Image HorizontalOptions="Center" VerticalOptions="Center" Source="Logo_Xamarin.jpg"/>
+                    </StackLayout>                    
+                </StackLayout>
+
+                <StackLayout Spacing="24">
+                    <Button Text="Maria Azevedo" FontSize="24" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaPerfil"/>
+                    <Button Text="Francisco de Assis" FontSize="24" TextColor="White" BackgroundColor="Transparent"/>
+                    <Button Text="Joao Medeiros" BackgroundColor="Transparent" FontSize="24" TextColor="White"/>
+                    <Button Text="Sobre o Xamarin" BackgroundColor="Transparent" Clicked="GoPaginaXamarin" FontSize="24" TextColor="White"/>
+
+                </StackLayout>
+
+                
+            </StackLayout>
+                
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <!-- Páginas -->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Perfil2/>
+            </x:Arguments>
+        </NavigationPage>
+
+    </MasterDetailPage.Detail>
+  
+</MasterDetailPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="App_Secao07.Views.Perfil">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300" >
+                <Image Source="3.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+                <Image x:Name="perfil" Source="1.png" WidthRequest="120" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=5, Constant=-60}" 
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Hight,Factor=0.2}"/>
+                <Label Text="Maria Azevedo" HorizontalOptions="Center" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=perfil, Property=X,Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=perfil, Property=X,Factor=1,Constant=180}"/>                
+            </RelativeLayout>
+            
+            <Grid HeightRequest="120" BackgroundColor="#0D1F2D">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="18" FontSize="32" TextColor="White"/>
+                    <Label Text="anos" HorizontalTextAlignment="Center" FontSize="12" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="18/02/2000" FontSize="32" TextColor="White"/>
+                    <Label Text="nasceu" HorizontalTextAlignment="Center" FontSize="12" TextColor="White"/>
+                </StackLayout>
+            </Grid>
+            
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="30">
+                <Label Text="Aqui teria um texto sobre a pessoal, com um pouco de sua historia, tragetoria e tudo mais. de acordo com a sua personalidade" />
+            </StackLayout>
+        </StackLayout>    
+    </ContentPage.Content>
+
+</ContentPage>
